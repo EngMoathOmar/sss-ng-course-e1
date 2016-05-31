@@ -1,0 +1,54 @@
+<html>
+
+<head>
+ 
+</head>
+
+<body ng-app = "app1">
+
+    <h1>starting angular js</h1>
+    <div></div>
+    <h3  ng-init="val1=8;val2=5"> {{val1}} + {{val2}} = {{ +val1+val2 | number:3}}</h3>
+
+    <div>val1 <input type="text" ng-model="val1" ></div>
+    <div>val2 <input type="text" ng-model="val2" ></div>
+    <div><button > calc </button></div>
+    <div ng-bind="val2"></div>
+    
+    <hr>
+    
+    <table ng-controller="controller1">
+        <thead>
+            <tr>
+                <td>search : <input type="text" ng-model="searchQuery"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="name in students | filter:searchQuery">
+                <td> {{name}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <hr>
+    
+    <div>date : <input type="date" ng-model="dateVal"></div>
+    
+    <div> date is : {{dateVal| date:"dd MMM"}}</div>
+  
+     <script src="bower_components/angular/angular.js"></script>
+      
+    
+    <script>
+        
+        angular.module("app1",[]);
+        
+        angular.module("app1")
+        .controller('controller1',function($scope){
+            $scope.students =  ['ahmad','ali','samer','tamer','zaid'];
+        });
+        
+    </script>
+</body>
+
+</html>

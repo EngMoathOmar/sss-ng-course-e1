@@ -1,0 +1,25 @@
+{
+  "name": "ng-course",
+  "homepage": "https://github.com/EngMoathOmar/sss-ng-course-e1.gist",
+  "authors": [
+    "Moath Omar <Moath@foothillsolutions.com>"
+  ],
+  "description": "tutorial course for angular js in arabic",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "1.5.3",
+    "angular-cache": "~4.3.2",
+    "angular-sanitize": "1.5.3",
+    "angular-ui-router": "0.2.13",
+    "Materialize": "materialize#^0.97.6",
+    "ngUnderscore": "~0.1.1"
+  }
+}
