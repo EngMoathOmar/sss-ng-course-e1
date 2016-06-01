@@ -1,54 +1,75 @@
 <html>
 
 <head>
- 
+
+    <link rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.css">
 </head>
 
-<body ng-app = "app1">
+<body ng-app="app1">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" >
 
-    <h1>starting angular js</h1>
-    <div></div>
-    <h3  ng-init="val1=8;val2=5"> {{val1}} + {{val2}} = {{ +val1+val2 | number:3}}</h3>
+        <h1>starting angular js</h1>
+        <div class="row"  ng-controller="studentsController">
+            <div class="col s6">
+            <h4>techers</h4>
+                <div ng-repeat="teacher in teachers" ng-click="handleTeacherChange(teacher)">
+                    {{teacher.first_name}}{{teacher.last_name}}
+                </div>
+            </div>
+            <div class="col s6">
+            <h4>teacher : detailes</h4>
 
-    <div>val1 <input type="text" ng-model="val1" ></div>
-    <div>val2 <input type="text" ng-model="val2" ></div>
-    <div><button > calc </button></div>
-    <div ng-bind="val2"></div>
+            <div class="card">
+                <div class="card-content">
+                    {{selectedTeacher.bio}}
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="card" ng-hide="true">
+            <div class="card-content">
+
+                <table>
+                    <thead>
+
+                        <tr>
+                            <td> # </td>
+                            <td>search : <input type="text" ng-model="searchQuery"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-class="{'blue accent-1':$even,'cyan darken-1':$odd}" class="orignal-class" ng-repeat="name in students | filter:searchQuery">
+                            <td>{{$index+1}}</td>
+                            <td> {{name}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/Materialize/dist/js/materialize.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
     
-    <hr>
     
-    <table ng-controller="controller1">
-        <thead>
-            <tr>
-                <td>search : <input type="text" ng-model="searchQuery"></td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="name in students | filter:searchQuery">
-                <td> {{name}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <script src="app/app.module.js"></script>
     
-    <hr>
-    
-    <div>date : <input type="date" ng-model="dateVal"></div>
-    
-    <div> date is : {{dateVal| date:"dd MMM"}}</div>
-  
-     <script src="bower_components/angular/angular.js"></script>
-      
-    
-    <script>
-        
-        angular.module("app1",[]);
-        
-        angular.module("app1")
-        .controller('controller1',function($scope){
-            $scope.students =  ['ahmad','ali','samer','tamer','zaid'];
-        });
-        
-    </script>
+    <script src="app/controllers/teachers.js"></script>
+    <script src="app/controllers/teachers.controller.js"></script>
+   
 </body>
 
 </html>
