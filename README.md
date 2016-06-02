@@ -146,14 +146,15 @@
 
 <hr/>
      
-`&lt;li> 9 </li>
-<li> 8 </li>
-<li> 7 </li>
-<li> 4 </li>`
+`&lt;li> 9 &lt;/li> <br/> 
+&lt;li> 8 &lt;/li> <br/> 
+&lt;li> 7 &lt;/li> <br/> 
+&lt;li> 4 &lt;/li>`
+<hr/>
 <li> 9 </li>
 <li> 8 </li>
 <li> 7 </li>
-<li> 4 </li>
+<li> 3 </li>
  
   </td>
 </tr>
@@ -166,7 +167,7 @@
 عادة تسخدم كما يوحي اسمها لاضفة مشروطة لل كلاس وغالبا بهدف تحقيق 
 ستايل معين بناءا على الكلاس عند تحقق شرط معين 
 كطلاء خلفية صف اختاره المستخدم بلون مختلف </td>
-<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-class="{'color-red':number%2 == 0}"> {{number}} &lt;/li> &lt;/ul>` 
+<td> `&lt;ul> <br/> &lt;li ng-repeat="number in  [9,8,7,4]" ng-class="{'color-red':number%2 == 0}"> {{number}} &lt;/li> &lt;/ul>` 
 </td>
 <td dir="rtl"> 
  في هذه الحالة سيتم اضافة 
