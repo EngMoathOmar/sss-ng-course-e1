@@ -137,7 +137,7 @@
 <tr>
 <td> `ng-repeat` </td>
 <td dir="rtl"> تكرار عرض ومعالجة العنصر المضافة اليه في ال الصفحة </td>
-<td> `&lt;ul> <li ng-repeat="number in  [9,8,7,4] "> {{number}} </li> </ul>`
+<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4] "> {{number}} </li> </ul>`
 </td>
 <td> 
 في هذه الحالة سيتم تكرار تاج ال li .. 
@@ -166,7 +166,8 @@
 عادة تسخدم كما يوحي اسمها لاضفة مشروطة لل كلاس وغالبا بهدف تحقيق 
 ستايل معين بناءا على الكلاس عند تحقق شرط معين 
 كطلاء خلفية صف اختاره المستخدم بلون مختلف </td>
-<td> `&lt;ul> <li ng-repeat="number in  [9,8,7,4]" ng-class="{'color-red':number%2 == 0}"> {{number}} </li> </ul>`&lt;/td>
+<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-class="{'color-red':number%2 == 0}"> {{number}} </li> </ul>` 
+</td>
 <td dir="rtl"> 
  في هذه الحالة سيتم اضافة 
  "color-red" class to tag li 
@@ -181,7 +182,8 @@
 <td> `ng-click` </td>
 <td dir="rtl"> ،  تستخدم لاضافة مستمع لحدث النقر على هذا العنصر باستخدام مؤشر الفارة  
  حيث تربط عادة مع مستمع "فنكشن" يتم مناداته  عند حدوث النقر او تنفيذ "exepression" معين </td>
-<td> `&lt;ul> <li ng-repeat="number in  [9,8,7,4]" ``ng-click="setSelectedNumber( number )"``> {{number}} </li> </ul>`&lt;/td>
+<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-click="setSelectedNumber( number )"> {{number}} </li> </ul>`
+</td>
 <td dir="rtl"> 
  في هذه الحالة سيتم اضافة عند النقر على رقم 5 مثلا في القائمة ، سيتم تمرير حدث النقر الى ال 
  li  ومن خلالها ولأنها تحمل ng-click  سيتم تنفيذ النص المخزن في ng-click  حيث سيتم هناك 
