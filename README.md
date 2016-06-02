@@ -81,14 +81,14 @@
 <tr>
 <td> `ng-bind ` attribute interpolation</td>
 <td dir="rtl"> طباعة قيمة متغير ، او اجراء عملية حسابية بين المغيرات الموجودة</td>
-<td> `&lt;span ng-bind="'a' +1"></span>` ==> a1 </td>
+<td> `&lt;span ng-bind="'a' +1">&lt;/span>` ==> a1 </td>
 <td> </td>
 </tr>
 
 <tr>
 <td> `ng-init ` </td>
 <td dir="rtl"> تستخدم لتعريف او اضافة متغير من الفيو الى الموديل </td>
-<td> `&lt;span ng-init="name='ahmad'"> </span> {{name}} ` ==> ahmad </td>
+<td> `&lt;span ng-init="name='ahmad'"> &lt;/span> {{name}} ` ==> ahmad </td>
 <td> </td>
 </tr>
 
@@ -103,7 +103,7 @@
 <td> `ng-show` </td>
 <td dir="rtl"> وكما يوحي اسمها، تستخدم لاظهار عنصر \"تاج element\tag" معين عند تحقق الششرط المقرون بها</td>
 <td>    
-    `&lt;h4 src="path\toimg.jpg" ng-show="notRegistered == true" > مرحبا بك انقر هنا للتسجيل</h4>`
+`&lt;h4 src="path\toimg.jpg" ng-show="notRegistered == true" > مرحبا بك انقر هنا للتسجيل&lt;/h4>`
 </td>
 <td dir="rtl"> هنا ستظهر  جملة "مرحبا بك ... " فقط حينما يتحقق 
     شرط `notRegistered == true`
@@ -115,7 +115,7 @@
 <td> `ng-hide` </td>
 <td dir="rtl"> وكما يوحي اسمها، تستخدم لاظهار عنصر \"تاج element\tag" معين عند تحقق الشرط المقرون بها</td>
 <td> 
-    `&lt;h4 src="path\toimg.jpg" ng-hide="isRegistered == true" > مرحبا بك انقر هنا للتسجيل </h4>`
+`&lt;h4 src="path\toimg.jpg" ng-hide="isRegistered == true" > مرحبا بك انقر هنا للتسجيل &lt;/h4>`
 </td>
 <td dir="rtl"> هنا ستظهر  جملة "مرحبا بك ... " فقط حينما يتحقق 
     شرط `isRegistered == true`
@@ -137,7 +137,7 @@
 <tr>
 <td> `ng-repeat` </td>
 <td dir="rtl"> تكرار عرض ومعالجة العنصر المضافة اليه في ال الصفحة </td>
-<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4] "> {{number}} </li> </ul>`
+<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4] "> {{number}} &lt;/li> &lt;/ul>`
 </td>
 <td> 
 في هذه الحالة سيتم تكرار تاج ال li .. 
@@ -166,7 +166,7 @@
 عادة تسخدم كما يوحي اسمها لاضفة مشروطة لل كلاس وغالبا بهدف تحقيق 
 ستايل معين بناءا على الكلاس عند تحقق شرط معين 
 كطلاء خلفية صف اختاره المستخدم بلون مختلف </td>
-<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-class="{'color-red':number%2 == 0}"> {{number}} </li> </ul>` 
+<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-class="{'color-red':number%2 == 0}"> {{number}} &lt;/li> &lt;/ul>` 
 </td>
 <td dir="rtl"> 
  في هذه الحالة سيتم اضافة 
@@ -182,7 +182,7 @@
 <td> `ng-click` </td>
 <td dir="rtl"> ،  تستخدم لاضافة مستمع لحدث النقر على هذا العنصر باستخدام مؤشر الفارة  
  حيث تربط عادة مع مستمع "فنكشن" يتم مناداته  عند حدوث النقر او تنفيذ "exepression" معين </td>
-<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-click="setSelectedNumber( number )"> {{number}} </li> </ul>`
+<td> `&lt;ul> &lt;li ng-repeat="number in  [9,8,7,4]" ng-click="setSelectedNumber( number )"> {{number}} &lt;/li> &lt;/ul>`
 </td>
 <td dir="rtl"> 
  في هذه الحالة سيتم اضافة عند النقر على رقم 5 مثلا في القائمة ، سيتم تمرير حدث النقر الى ال 
