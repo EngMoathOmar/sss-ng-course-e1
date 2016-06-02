@@ -102,7 +102,9 @@
 <tr>
 <td> `ng-show` </td>
 <td dir="rtl"> وكما يوحي اسمها، تستخدم لاظهار عنصر \"تاج element\tag" معين عند تحقق الششرط المقرون بها</td>
-<td> `<h1 src="path\toimg.jpg" ng-show="notRegistered == true" > مرحبا بك انقر هنا للتسجيل</h1>`</td>
+<td>    
+    `<h4 src="path\toimg.jpg" ng-show="notRegistered == true" > مرحبا بك انقر هنا للتسجيل</h4>`
+</td>
 <td dir="rtl"> هنا ستظهر  جملة "مرحبا بك ... " فقط حينما يتحقق 
     شرط `notRegistered == true`
   </td>
@@ -111,8 +113,10 @@
 
 <tr>
 <td> `ng-hide` </td>
-<td dir="rtl"> وكما يوحي اسمها، تستخدم لاظهار عنصر \"تاج element\tag" معين عند تحقق الششرط المقرون بها</td>
-<td> `<h1 src="path\toimg.jpg" ng-hide="isRegistered == true" > مرحبا بك انقر هنا للتسجيل </h1>`</td>
+<td dir="rtl"> وكما يوحي اسمها، تستخدم لاظهار عنصر \"تاج element\tag" معين عند تحقق الشرط المقرون بها</td>
+<td> 
+    `<h4 src="path\toimg.jpg" ng-hide="isRegistered == true" > مرحبا بك انقر هنا للتسجيل </h4>`
+</td>
 <td dir="rtl"> هنا ستظهر  جملة "مرحبا بك ... " فقط حينما يتحقق 
     شرط `isRegistered == true`
   </td>
@@ -121,8 +125,10 @@
 
 <tr>
 <td> `ng-if` </td>
-<td  dir="rtl"> وكما يوحي اسمها، تستخدم لحذف "وليس اخفاء" عنصر \"تاج element\tag" معين عند عدم تحقق الششرط المقرون بها</td>
-<td> `<h1 src="path\toimg.jpg" ng-if="isRegistered == true" > مرحبا بك انقر هنا للتسجيل </h1>`</td>
+<td  dir="rtl"> وكما يوحي اسمها، تستخدم لحذف "وليس اخفاء" عنصر \"تاج element\tag" معين عند عدم تحقق الشرط المقرون بها</td>
+<td> 
+    `<h4 src="path\toimg.jpg" ng-if="isRegistered == true" > مرحبا بك انقر هنا للتسجيل </h4>`
+</td>
 <td dir="rtl"> اذا لم يتحقق الشرط سيتم حظف العنصر من ال dom
   </td>
 </tr>
