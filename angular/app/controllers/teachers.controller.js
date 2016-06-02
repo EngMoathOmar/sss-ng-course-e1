@@ -12,7 +12,7 @@
 
         $scope.handleTeacherChange = function(_teacher){
         	 $scope.selectedTeacher = _teacher;
-        }
+        };
     }
 
 })();
