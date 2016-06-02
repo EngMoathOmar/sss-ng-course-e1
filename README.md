@@ -127,7 +127,7 @@
 <td> `ng-if` </td>
 <td  dir="rtl"> وكما يوحي اسمها، تستخدم لحذف "وليس اخفاء" عنصر \"تاج element\tag" معين عند عدم تحقق الشرط المقرون بها</td>
 <td> 
-    ```<h4 src="path\toimg.jpg" ng-if="isRegistered == true" > مرحبا بك انقر هنا للتسجيل </h4>```
+   `&lt;h4 src="path\toimg.jpg" ng-if="isRegistered == true" > مرحبا بك انقر هنا للتسجيل &lt;/h4>`
 </td>
 <td dir="rtl"> اذا لم يتحقق الشرط سيتم حظف العنصر من ال dom
   </td>
