@@ -1,0 +1,19 @@
+<div class="row" ng-controller="studentsController as studentsCtrl">
+    <h4>sin scope {{studentsCtrl.title}}</h4>
+    <h3>  {{ studentsCtrl.Prop}}</h3>
+    <div class="col s6">
+        <h4>techers </h4>
+        <button ng-click="handleAddTeacher()"> + add TEacher</button>
+        <div ng-repeat="teacher in teachers track by $index" ng-click="handleTeacherChange(teacher)">
+            {{teacher.first_name}}{{teacher.last_name}} {{teachers[0].last_name}}
+        </div>
+    </div>
+    <div class="col s6">
+        <h4>teacher : detailes</h4>
+
+        <div class="card">
+            <div class="card-content">S {{selectedTeacher.bio}}
+            </div>
+        </div>
+    </div>
+</div>
