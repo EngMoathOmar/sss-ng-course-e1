@@ -17,11 +17,34 @@
             var serviceUrl = ApiEndPoint + "/getTeachers";
 
             return $http
-                .get(serviceUrl);
+                .get(serviceUrl)
+                .then(function name(response) {
+                    // here the data is wrapped within the response object
+                    // response = {data:[{}] , statusCode ,configs....} 
+                    return response.data;
+                });
         }
 
-        function getTeacherStudents() {
+        function getTeacherStudents(teacherId) {
 
+            var serviceUrl = ApiEndPoint + "/getTeachers";
+
+            return $http
+                .get(serviceUrl)
+                .then(function name(response) {
+                    // here the data is wrapped within the response object
+                    // response = {data:[{first_name,last_name,students:[]}] , statusCode ,configs....} 
+                    return response.data.students;
+                });
+        }
+
+        function addTeacher(teacher) {
+            return $http
+                .post(serviceUrl, teacher)
+                .then(function (response) {
+                    //this service returns the updated list of teachers. 
+                    return response.data;
+                });
         }
     }
 })();

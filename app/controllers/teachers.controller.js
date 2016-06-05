@@ -28,6 +28,7 @@
         var teacherId = 105;
 
         getTeachers();
+
         $scope.handleAddTeacher = handleAddTeacher;
         //////////////////////////
 
@@ -35,31 +36,19 @@
             var teacher = { "id": 7, "gender": "Male", "first_name": "Victor " + teacherId++, "last_name": "Barnes", "email": "vbarnes6@github.io", "job": "Research Associate" };
             var serviceUrl = ApiEndPoint + "/addTeacher";
 
-            return $http
-                .post(serviceUrl, teacher)
-                .then(function (response) {
-                    console.log("res", response);
-
-                    return response.data;
-                })
+            return teachersService
+                .addTeacher(teacher)
                 .then(function (data) {
-                    console.log("data", data);
                     $scope.teachers = data;
                 });
         }
 
+
         function getTeachers() {
 
-            var serviceUrl = ApiEndPoint + "/getTeachers";
-
-            return $http
-                .get(serviceUrl)
-                .then(function (response) {
-                    console.log("res", response);
-                    return response.data;
-                })
+            teachersService
+                .getTeachers()
                 .then(function (data) {
-                    console.log("data", data);
                     $scope.teachers = data;
                 });
         }
