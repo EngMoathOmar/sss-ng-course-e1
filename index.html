@@ -10,55 +10,40 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li ng-click="showTeachers=true"><a>teachers</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
-              
+                <li><a href="#/home"> home</a></li>
+                <li><a ui-sref="teachers">teachers</a></li>
+                <li><a ui-sref="about">about</a></li>
+
             </ul>
         </div>
     </nav>
-    <div class="container" >
+    <div class="container">
 
         <h4>rootScope {{title}}</h4>
-       
-        <div ng-include src="'./app/templates/teachers.template.html'"></div>
-        
-        <div class="card" ng-hide="true">
-            <div class="card-content">
 
-                <table>
-                    <thead>
+        <!--<div ng-include src="'./app/templates/teachers.template.html'"></div>-->
 
-                        <tr>
-                            <td> # </td>
-                            <td>search : <input type="text" ng-model="searchQuery"></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-class="{'blue accent-1':$even,'cyan darken-1':$odd}" class="orignal-class" ng-repeat="name in students | filter:searchQuery">
-                            <td>{{$index+1}}</td>
-                            <td> {{name}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
+        <div id="myview" ui-view></div>
     </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/Materialize/dist/js/materialize.js"></script>
 
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
 
     <script src="app/app.module.js"></script>
+    <script src="app/app.routes.config.js"></script>
 
     <script src="app/controllers/teachers.js"></script>
     <script src="app/app.constants.js"></script>
-    
+
+    <script src="app/controllers/items.controller.js"></script>
+    <script src="app/controllers/itemDetails.controller.js"></script>
     <script src="app/controllers/teachers.controller.js"></script>
+    
     <script src="app/services/teachers.service.js"></script>
+    <script src="app/services/items.service.js"></script>
 
 </body>
 
