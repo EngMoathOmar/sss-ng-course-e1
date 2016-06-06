@@ -5,7 +5,7 @@
         .module('app1')
         .controller('itemDetailController', itemDetailController);
 
-    function itemDetailController(itemService, $stateParams) {
+    function itemDetailController(itemService, $scope,$stateParams) {
         var vm = this;
         
         $scope.item ={};        
