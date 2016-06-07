@@ -1,13 +1,14 @@
 (function () {
     'use strict';
 
-    angular.module('app1')
+    angular
+        .module('app1')
         .config(function ($stateProvider) {
 
             $stateProvider
                 .state('about', {
-                    url: "/About/is/my/best/page",
-                    template: "<h1> Heeloo from about </h1> <h3>{{timeNow |date:'MMM dd yyyy'}}</h3>",
+                    url: "/About",
+                    template: "<h1> Hello from about Page</h1> <h3>{{timeNow |date:'MMM dd yyyy'}}</h3>",
                     // templateUrl:"./app/templates/about.html",
                     controller: function ($scope) {
                         $scope.timeNow = new Date();
@@ -16,7 +17,7 @@
                 .state('teachers', {
                     url: '/teachers',
                     templateUrl: './app/templates/teachers.template.html',
-                    controller: 'studentsController',
+                    controller: 'teachersController',
                     controllerAs: 'studentsCtrl'
                 })
                 .state('items', {
@@ -25,7 +26,7 @@
                     templateUrl: 'app/templates/items-list.html'
                 })
                 .state('itemDetails', {
-                    url: '/items/{id}',
+                    url: '/items/{Id}',
                     controller: 'itemDetailController',
                     templateUrl: 'app/templates/item-details.html'
                 });
@@ -35,11 +36,7 @@
             $stateProvider
                 .state('homePage', {
                     url: "/home",
-                    template: "<h1> Heeloo from home </h1>",
-                    // templateUrl:"./app/templates/about.html",
-                    controller: function ($scope) {
-                        $scope.timeNow = new Date();
-                    }
+                    template: "<h1> Helloo from home Page</h1>",
                 });
         });
 })();

@@ -1,9 +1,9 @@
 (function () {
 
     angular.module("app1")
-        .controller('studentsController', studentsController);
+        .controller('teachersController', teachersController);
 
-    function studentsController($scope, $rootScope, $http, ApiEndPoint, $timeout, teachersService, ApiEndPoint) {
+    function teachersController($scope, $rootScope, $http, ApiEndPoint, $timeout, teachersService, ApiEndPoint) {
 
         $scope.rootUrl = ApiEndPoint;
         $scope.teachers = [];

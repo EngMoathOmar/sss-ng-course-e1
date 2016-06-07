@@ -1,9 +1,7 @@
 <div class="row">
-    <h4>sin scope {{studentsCtrl.title}}</h4>
-    <h3>  {{ studentsCtrl.Prop}}</h3>
     <div class="col s6">
-        <h4>techers </h4>
-        <button ng-click="handleAddTeacher()"> + add TEacher</button>
+        <h4>teachers </h4>
+        <button class="waves-effect waves-light btn ng-click="handleAddTeacher()"> + add TEacher</button>
         <div ng-repeat="teacher in teachers track by $index" ng-click="handleTeacherChange(teacher)">
             {{teacher.first_name}}{{teacher.last_name}} {{teachers[0].last_name}}
         </div>

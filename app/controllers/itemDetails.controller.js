@@ -16,8 +16,8 @@
         ////////////////
 
         function activate() {
-            if ($stateParams.id) {
-                getItemDetail($stateParams.id);
+            if ($stateParams.Id) {
+                getItemDetail($stateParams.Id);
             }
         }
 
