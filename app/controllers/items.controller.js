@@ -12,7 +12,8 @@
 
 
         $scope.goToItem = goToItem;
-
+        $scope.handleRankChanged = handleRankChanged;
+        
         activate();
 
         ////////////////
@@ -22,7 +23,7 @@
         }
 
         function goToItem(id) {
-            $state.go("itemDetails", { Id: id });
+            $state.go("item.details", { Id: id });
         }
 
         function getStoreItems() {
@@ -34,6 +35,11 @@
                 }).finally(function name() {
                     $scope.loadingItems = false;
                 });
+        }
+
+        function handleRankChanged(rank){
+            console.log(rank);
+            alert(rank);
         }
     }
 })();
