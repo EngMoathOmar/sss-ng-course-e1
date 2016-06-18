@@ -1,30 +1,31 @@
-<div class="row">
-    <div class="spinner-wrapper" ng-show="loadingItems">
-        <div class="sk-cube-grid">
-            <div class="sk-cube sk-cube1"></div>
-            <div class="sk-cube sk-cube2"></div>
-            <div class="sk-cube sk-cube3"></div>
-            <div class="sk-cube sk-cube4"></div>
-            <div class="sk-cube sk-cube5"></div>
-            <div class="sk-cube sk-cube6"></div>
-            <div class="sk-cube sk-cube7"></div>
-            <div class="sk-cube sk-cube8"></div>
-            <div class="sk-cube sk-cube9"></div>
-        </div>
-        <h1 class="text-center center"> loading Items </h1>
+<div class="row" ng-init="loadingMessageMy ='loading from server ...'">
+    <div>
+        <input id="loadingItems" type="checkbox" ng-model="loadingItems">
+        <label for="loadingItems">Show items </label>
     </div>
-    <div ng-hide="loadingItems" class="col s4" ng-repeat="item in storeItems track by $index ">
+    <hr>
+    <input type="text" ng-model="loadingMessageMy">
+    <hr>
+
+
+    <a360-spinner loading-msg="hello from vm"  loading-msg-exp="loadingMessageMy" ng-show="loadingItems"></a360-spinner>
+
+    <div ng-hide="loadingItems" class="col s4" enlarge-on-hover ng-repeat="item in storeItems track by $index ">
         <div class="card ">
             <div class="card-image waves-effect waves-block waves-light">
                 <img style="height:250px" ng-click="goToItem(item.id)" class="activator" ng-src="{{item.image}}">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"> <a ui-sref="itemDetails({Id:item.id})"> {{item.name}}</a><i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4"> <a ui-sref=".details({Id:item.id})"> {{item.name}}</a><i class="material-icons right">more_vert</i></span>
                 <p> <a href="#/items/{{item.id}}"> {{item.price}}</a></p>
+                <p ng-show="mouseOver">
+                    <a-rank rank="item.rank" on-rank-changed="handleRankChanged(rank)"></a-rank>
+                </p>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"> <a ui-sref="itemDetails({Id:item.id})"> {{item.name}}</a><i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4"> <a ui-sref="items.details({Id:item.id})"> {{item.name}}</a><i class="material-icons right">close</i></span>
                 <p> {{item|json}}</p>
+
             </div>
         </div>
 

@@ -1,0 +1,7 @@
+<span>
+
+<i ng-click="setRank($index)" class="material-icons" ng-repeat="i in fullRank track by $index">star</i> 
+<!--<i ng-click="setRank()" class="material-icons" ng-if="hasHalf">star_half</i>-->
+<i ng-click="setRank(rank+$index)" class="material-icons" ng-repeat=" i in complement track by $index" >star_border</i>
+
+</span>
